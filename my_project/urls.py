@@ -18,10 +18,14 @@ from django.contrib import admin
 from django.urls import path, include
 from hello_world import views as index_views
 from about import views as about_views
+from products import views as products_views
+from contact import views as contact_views
 
 
 urlpatterns = [
     path('hello/', index_views.index, name='index'),
     path('about/', about_views.about_me, name='about'),
+    path('products/', products_views.products, name='products'),
+    path('contact/', contact_views.contact, name='contact'),
     path('admin/', admin.site.urls),
 ]
